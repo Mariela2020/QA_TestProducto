@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
 import java.net.MalformedURLException;
+import java.util.concurrent.TimeUnit;
 
 public class ProductosTest {
 
@@ -30,16 +31,16 @@ public class ProductosTest {
     DatosContratosPage datosContratosPage;
     DetalleContratoPage detalleContratoPage;
 
-    @BeforeTest
+   // @BeforeTest
     //@Parameters({"browser"})
-    public void setUpTest() throws MalformedURLException {
+  /*  public void setUpTest() throws MalformedURLException {
         DriverManagerFactory.getInstance().setDriver(DriverType.FIREFOX);
         driver = DriverManagerFactory.getInstance().getDriver();
         driver.get(baseUrl);
         waitElement = new WebDriverWait(driver, 15);
-    }
+    } */
 
-  /*  @BeforeTest
+    @BeforeTest
     @Parameters({"browser"})
     public void launchBrowser(String browser) throws Exception {
         switch (browser.toUpperCase()){
@@ -88,7 +89,7 @@ public class ProductosTest {
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get(baseUrl);
 
-    } */
+    }
 
     @AfterTest
     public void tearDown(){
